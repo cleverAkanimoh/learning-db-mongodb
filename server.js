@@ -15,5 +15,10 @@ mongoose.connect(process.env.MONGODB_URI, {
 
 // end of db
 
+//router routes
+app.get('/', (req, res) => {
+    res.status(200).send('hompage')
+})
+
 app.listen(PORT, () => console.log(`\nserver is running on localhost:${PORT}`)
 )
